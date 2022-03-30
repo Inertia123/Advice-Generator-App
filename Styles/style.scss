@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap');
+
+$Light-Cyan: hsl(193, 38%, 86%);
+$Neon-Green: hsl(150, 100%, 66%);
+$Grayish-Blue: hsl(217, 19%, 38%);
+$Dark-Grayish-Blue: hsl(217, 19%, 24%);
+$Dark-Blue: hsl(218, 23%, 16%);
+$Font: 'Manrope', sans-serif;
+
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 28px;
+    font-family: $Font;
+}
+
+body{
+    background: $Dark-Blue;
+    @media only screen and (min-width: 900px){
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+    }
+    main{
+        max-width: 90%;
+        margin: 0 auto;
+        margin-top: 40%;
+        @media only screen and (min-width: 900px){
+            max-width: 40%;
+            margin-top: 0;
+        }
+        @media only screen and (max-width: 1220px) and (min-width: 900px){
+            max-width: 55%;
+            margin-top: 0;
+        }
+        .card{
+            background: $Dark-Grayish-Blue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 1.5rem 1.2rem 2rem;
+            border-radius: 0.4rem;
+            position: relative;
+            .advice-id{
+                color: $Neon-Green;
+                font-size: 0.4rem;
+                letter-spacing: 0.1rem;
+                font-weight: 800;
+                margin-bottom: 1rem;
+                text-transform: uppercase;
+            }
+            .quote{
+                color: $Light-Cyan;
+                font-size: 0.75rem;
+                font-weight: 800;
+                line-height: 1.1rem;
+                margin-bottom: 1rem;
+            }
+            .divider{
+                display: flex;
+                justify-content: center;
+                .desk{
+                    display: none;
+                }
+                @media only screen and (min-width: 900px) {
+                    .desk{
+                        display: block;
+                    }
+                    .mob{
+                        display: none;
+                    }
+                }
+            }
+            .dice{
+                width: 2rem;
+                aspect-ratio: 1;
+                background: $Neon-Green;
+                display: grid;
+                place-items:center;
+                position: absolute;
+                border-radius: 50%;
+                bottom: 0;
+                transform: translateY(50%);
+                cursor: pointer;
+                &:hover{
+                    box-shadow: 0 0 3rem hsla(150, 100%, 66%, 0.85);
+                }
+                img{
+                    height: 0.8rem;
+                }
+            }
+        }
+    }
+}

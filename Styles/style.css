@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap");
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 28px;
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  background: #1f2632;
+}
+
+@media only screen and (min-width: 900px) {
+  body {
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+  }
+}
+
+body main {
+  max-width: 90%;
+  margin: 0 auto;
+  margin-top: 40%;
+}
+
+@media only screen and (min-width: 900px) {
+  body main {
+    max-width: 40%;
+    margin-top: 0;
+  }
+}
+
+@media only screen and (max-width: 1220px) and (min-width: 900px) {
+  body main {
+    max-width: 55%;
+    margin-top: 0;
+  }
+}
+
+body main .card {
+  background: #323a49;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  padding: 1.5rem 1.2rem 2rem;
+  border-radius: 0.4rem;
+  position: relative;
+}
+
+body main .card .advice-id {
+  color: #52ffa8;
+  font-size: 0.4rem;
+  letter-spacing: 0.1rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+body main .card .quote {
+  color: #cee3e9;
+  font-size: 0.75rem;
+  font-weight: 800;
+  line-height: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+body main .card .divider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .card .divider .desk {
+  display: none;
+}
+
+@media only screen and (min-width: 900px) {
+  body main .card .divider .desk {
+    display: block;
+  }
+  body main .card .divider .mob {
+    display: none;
+  }
+}
+
+body main .card .dice {
+  width: 2rem;
+  aspect-ratio: 1;
+  background: #52ffa8;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  border-radius: 50%;
+  bottom: 0;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  cursor: pointer;
+}
+
+body main .card .dice:hover {
+  -webkit-box-shadow: 0 0 3rem rgba(82, 255, 168, 0.85);
+          box-shadow: 0 0 3rem rgba(82, 255, 168, 0.85);
+}
+
+body main .card .dice img {
+  height: 0.8rem;
+}
+/*# sourceMappingURL=style.css.map */
