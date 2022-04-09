@@ -7,7 +7,7 @@ function onBtnClick (){
         .then(resp => resp.json())
         .then(jsonData => {
             adId.innerText = 'advice #' + jsonData['slip']['id'];
-            quote.innerText = jsonData['slip']['advice'];
+            quote.innerText = '"' + jsonData['slip']['advice'] + '"';
         })
 
 }
